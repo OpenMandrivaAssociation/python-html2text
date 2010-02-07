@@ -1,8 +1,8 @@
 Name:           python-html2text
 Version:        2.38
-Release:        1
+Release:        %mkrel 1
 Summary:        Converts a page of HTML into clean, easy-to-read plain ASCII text
-Group:          Development/Languages
+Group:          Development/Python
 License:        GPLv3
 URL:            http://www.aaronsw.com/2002/html2text/
 Source0:        http://www.aaronsw.com/2002/html2text/html2text-%{version}.py
