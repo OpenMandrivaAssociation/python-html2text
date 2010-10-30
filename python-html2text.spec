@@ -1,5 +1,5 @@
 Name:           python-html2text
-Version:        2.38
+Version:        2.39
 Release:        %mkrel 1
 Summary:        Converts a page of HTML into clean, easy-to-read plain ASCII text
 Group:          Development/Python
