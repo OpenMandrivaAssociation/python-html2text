@@ -35,3 +35,20 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %{python_sitelib}/*
+
+
+%changelog
+* Mon Nov 15 2010 Ahmad Samir <ahmadsamir@mandriva.org> 2.39-2mdv2011.0
++ Revision: 597746
+- Resubmit, the last package has a wrong file list
+
+* Sat Oct 30 2010 Ahmad Samir <ahmadsamir@mandriva.org> 2.39-1mdv2011.0
++ Revision: 590521
+- update to 2.39
+
+* Sun Feb 07 2010 Ahmad Samir <ahmadsamir@mandriva.org> 2.38-1mdv2010.1
++ Revision: 501852
+- Fix spec
+- Import python-html2text (based on Fedora .spec)
+
+
