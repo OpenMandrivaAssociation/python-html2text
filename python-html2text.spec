@@ -1,13 +1,17 @@
+%define module  html2text
+
 Name:           python-html2text
-Version:        3.200.3
-Release:        3
+Version:        2019.9.26
+Release:        1
 Summary:        Converts a page of HTML into clean, easy-to-read plain ASCII text
 Group:          Development/Python
 License:        GPLv3
-URL:            http://www.aaronsw.com/2002/html2text/
-Source0:        https://github.com/aaronsw/html2text/raw/master/html2text.py
+URL:            http://alir3z4.github.io/html2text/
+Source0:        https://files.pythonhosted.org/packages/81/41/0aba42dac6d0ffe0a721f7fe353acc70a4cf284facdb8763f4591961dd0b/html2text-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python
+BuildRequires:  pkgconfig(python)
+BuildRequires:  python3dist(setuptools)
 Provides:	pythonegg(html2text)
 
 %description
@@ -18,17 +22,22 @@ be valid Markdown (a text-to-HTML format).
 Also known as: THE ASCIINATOR, html to text, htm to txt, htm2txt, ...
 
 %prep
-%setup -q -c -T
-install -p %{SOURCE0} ./html2text.py
+%setup -q -n %{module}-%{version}
+
+# Remove bundled egg-info
+rm -rf %{module}.egg-info
 
 %build
-echo Nothing to build
+%py_build
 
 %install
-mkdir -p %{buildroot}/%{py_puresitedir}/
-install -p -m 0644 html2text.py %{buildroot}/%{py_puresitedir}/
+%py_install
+# fix file conflitct with html2text:
+mv %{buildroot}%{_bindir}/html2text %{buildroot}%{_bindir}/python-%{module}
 
-%clean
+%check
+%{__python} setup.py test || /bin/true
 
 %files
-%{py_puresitedir}/*
+%{_bindir}/python-%{module}
+%{python_sitelib}/*
