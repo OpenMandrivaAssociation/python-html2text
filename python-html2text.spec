@@ -1,13 +1,13 @@
 %define module  html2text
 
 Name:           python-html2text
-Version:        2019.9.26
+Version:        2020.1.16
 Release:        1
 Summary:        Converts a page of HTML into clean, easy-to-read plain ASCII text
 Group:          Development/Python
 License:        GPLv3
 URL:            http://alir3z4.github.io/html2text/
-Source0:        https://files.pythonhosted.org/packages/81/41/0aba42dac6d0ffe0a721f7fe353acc70a4cf284facdb8763f4591961dd0b/html2text-%{version}.tar.gz
+Source0:        https://files.pythonhosted.org/packages/source/h/html2text/html2text-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python
 BuildRequires:  pkgconfig(python)
