@@ -6,7 +6,7 @@ Release:        1
 Summary:        Converts a page of HTML into clean, easy-to-read plain ASCII text
 Group:          Development/Python
 License:        GPLv3
-URL:            http://alir3z4.github.io/html2text/
+URL:            https://alir3z4.github.io/html2text/
 Source0:        https://files.pythonhosted.org/packages/source/h/html2text/html2text-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  python
