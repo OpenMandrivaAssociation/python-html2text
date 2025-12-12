@@ -2,7 +2,7 @@
 
 Name:           python-html2text
 Version:        2025.4.15
-Release:        1
+Release:        2
 Summary:        Converts a page of HTML into clean, easy-to-read plain ASCII text
 Group:          Development/Python
 License:        GPLv3
