@@ -11,7 +11,8 @@ Source0:        https://files.pythonhosted.org/packages/source/h/html2text/html2
 BuildArch:      noarch
 BuildRequires:  python
 BuildRequires:  pkgconfig(python)
-BuildRequires:  python3dist(setuptools)
+BuildRequires:  python%{pyver}dist(setuptools)
+BuildRequires:  python%{pyver}dist(pip)
 Provides:	pythonegg(html2text)
 
 %description
