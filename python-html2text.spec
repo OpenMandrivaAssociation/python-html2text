@@ -12,7 +12,7 @@ BuildArch:      noarch
 BuildRequires:  python
 BuildRequires:  pkgconfig(python)
 BuildRequires:  python%{pyver}dist(setuptools)
-BuildRequires:  python%{pyver}dist(setuptools_scm)
+BuildRequires:  python%{pyver}dist(setuptools-scm)
 BuildRequires:  python%{pyver}dist(pip)
 Provides:	pythonegg(html2text)
 
