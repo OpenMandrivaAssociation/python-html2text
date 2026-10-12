@@ -2,7 +2,7 @@
 
 Name:           python-html2text
 Version:        2025.4.15
-Release:        3
+Release:        4
 Summary:        Converts a page of HTML into clean, easy-to-read plain ASCII text
 Group:          Development/Python
 License:        GPLv3
@@ -30,6 +30,9 @@ Also known as: THE ASCIINATOR, html to text, htm to txt, htm2txt, ...
 rm -rf %{module}.egg-info
 
 %build
+# The sdist is not a git checkout, so the versioning backend needs the version.
+export SETUPTOOLS_SCM_PRETEND_VERSION=%{version}
+
 %py_build
 
 %install
